@@ -1,0 +1,66 @@
+header{
+    text-align: center;
+    font-family: 'Caveat', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+body{
+    text-align: center;
+    background-attachment: fixed;
+    background-image: linear-gradient(34deg,#7c7779,#ffffff);
+    font-size: 150%;
+}
+
+.name, .email, .option, .agreement, .dropdown{
+    margin:1% 1% 2% 25%;
+    width: 50%;
+    border: 3px rgba(29, 92, 195, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+    padding-bottom: 5%;
+    box-shadow: rgba(19, 19, 19, 0.8) 0px 25px 20px -20px;
+}
+
+.messageBox{
+    margin:1% 1% 0% 25%;
+    width: 50%;
+    border: 3px rgba(29, 92, 195, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+    padding-bottom: 5%;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 25px 20px -20px;
+}
+
+.containerButton{
+    margin: 1% 0% -10% 1%;
+    text-align: center;
+}
+
+#submitBTN, #resetBTN{
+    cursor: pointer;
+    margin-bottom: 10%;
+    font-size: 20px;
+    color: white;
+    background: rgb(48, 65, 116);
+    border: 2px solid rgb(37, 34, 34);
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px; 
+}
+
+label,p{
+    color: aliceblue;
+    font-family: Libre Franklin;
+}
+
+input, textarea{
+    border-radius: 10px;
+    border: outset rgb(37, 34, 34,0.7);
+}
+
+#name, #email{
+    height:50px;
+    font-size:14pt;
+}

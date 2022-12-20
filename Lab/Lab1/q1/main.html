@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Card</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Sans|Audiowide|Cinzel">
+</head>
+<body>
+    <h1>Student Profile Card</h1>
+
+    <div class="container">
+        <img src="profilePic.png" class="imgCen" height="375" alt="Avatar">
+
+        <p class="name">MUHAMMAD HAFIZUDDIN BIN ABDUL HAMID</p>
+        <p>Expert in: CSS & HTML, JAVASCRIPT</p>
+        <p>UTHM PAGOH</p>
+
+        <div class="link">
+            <a href="https://github.com/apiz23" target="_blank"><img src="github.png" height="25"></a>
+            <a href="https://leetcode.com/" target="_blank"><img src="leetcode.png" height="25"></a>
+        </div>
+
+        </br>
+        <button id="btn" type="button" onclick="alert('01111263463')">Contact Me</button>
+        <button id="hireME_btn">Hire me</button>
+    </div>
+    <script>
+        document.getElementById("hireME_btn").onclick = function() {f1()};
+        
+        function f1(){
+            document.getElementById("hireME_btn").innerHTML = "Hye";
+            document.getElementById("hireME_btn").onclick = function() {f2()};
+        }
+        function f2(){
+            document.getElementById("hireME_btn").innerHTML = "Sir";
+            document.getElementById("hireME_btn").onclick = function() {f3()};
+        }
+        function f3(){
+            document.getElementById("hireME_btn").innerHTML = "Hire me";
+            document.getElementById("hireME_btn").onclick = function() {f1()};
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+}
+
+.container_main{
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    width: 50%;
+    padding: 10px;
+    box-shadow: 10px 10px 20px 5px rgb(0, 0, 0,0.6);
+    height:50em;
+}
+
+.list, .oil, .nuts, .chocolate, .toiletpaper, .vegetables, .total, .paid, .change{
+    margin-left: 6em;
+    margin-right: 6em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new3{
+    margin-left: 10ex;
+    margin-right: 10ex;
+    border-top: 1px dotted rgb(0, 0, 0);
+}
+
+#footer{
+    margin-left: 20ex;
+}

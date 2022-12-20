@@ -1,0 +1,86 @@
+    1.Create database
+    $sql = "CREATE DATABASE UTHMPagoh";
+    if (mysqli_query($conn, $sql)) {
+        echo "Database created successfully";
+    }else{
+        echo "Error creating database: " . mysqli_error($conn);
+    }
+    
+
+    2.creating table
+    $sql = "CREATE TABLE Student (
+        Id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        Names VARCHAR(30) NOT NULL,
+        Ages INT(6),
+        States VARCHAR(30),
+        Scores INT(6)
+        )";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "Table MyGuests created successfully";
+    }else {
+        echo "Error creating table: " . mysqli_error($conn);
+    }
+
+
+    3.inserting data
+    $sql = "INSERT INTO Student VALUES (1, 'Gabriel', 20, 'Kedah',30),
+                                        (2, 'Michael', 12, 'Penang',10),
+                                        (3,'Ronaldo',13,'Perak',98),
+                                        (4,'Roberto',22,'Perak',76)";
+
+    if(mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+    }else{
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+
+    4. Count Row
+    $sql = "SELECT * from Student";
+    if ($result = mysqli_query($conn, $sql)) {
+        echo "Total rows in this table : " . mysqli_num_rows( $result ) . "\n";
+    }
+
+    $sql = "SELECT * FROM Student";
+    
+    $table = mysqli_query($conn,$sql);
+
+    echo "<table>";
+        echo "<tr>";
+            echo "<th>Id</th>";
+            echo "<th>Names</th>";
+            echo "<th>Ages</th>";
+            echo "<th>States</th>";
+            echo "<th>Scores</th>";
+        echo "</tr>";
+        while($row = mysqli_fetch_array($table)){
+            echo "<tr>";
+                echo "<td>" . $row['Id'] . "</td>";
+                echo "<td>" . $row['Names'] . "</td>";
+                echo "<td>" . $row['Ages'] . "</td>";
+                echo "<td>" . $row['States'] . "</td>";
+                echo "<td>" . $row['Scores'] . "</td>";
+                echo "<br>";
+            echo "</tr>";
+        }
+    echo "</table>";
+
+
+    5.Updating record score >= 30
+    $sql = "SELECT Names FROM Student WHERE Scores >= 30";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        echo "<table>";
+            echo "<tr>";
+            while($row = mysqli_fetch_assoc($result)) {
+                echo " - Name: " . $row["Names"] . "<br>";
+            }
+            echo "</tr>";
+        echo "</table>";
+    }else{
+        echo "0 results";
+    }
+    

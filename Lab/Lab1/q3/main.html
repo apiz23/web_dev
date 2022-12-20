@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form q3</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Question 3 Twitter Registration</h1>
+    <form name="myform" method="post" onsubmit="return validateform()" >
+        <div class="container_name">
+            <input type="text" id="name" name="name" placeholder="Name">
+        </div>
+        <div class="">
+            <input type="text" id="email" name="email" placeholder="email">
+        </div>
+        <div class="container_password">
+            <input type="password" id="password" name="password" placeholder="Password">
+        </div>
+        
+        <input type="checkbox" name="tick">
+        <label for="tick">Personlize Twitter based on where you have seen Twitter </br> content on the web</label>
+        
+        <a href="https://twitter.com/login" target="_blank">Learn More</a>
+        
+        <button id="btn_submit" type="submit">Sign up</button>
+    </form>
+
+    <script>  
+        function validateform(){  
+            var name=document.myform.name.value;  
+            var password=document.myform.password.value;  
+            var email = document.myform.email.value;
+            var mailformat = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+            
+            if (name==null || name==""){  
+                alert("Name can't be blank");  
+                return false;  
+            }else if(!(email.match(mailformat))){
+                    alert("Please enter a valid email");
+                    return false;
+            }else if(password.length<6){  
+                alert("Password must be at least 6 characters long.");  
+                return false;  
+            }  
+        }  
+    </script> 
+</body>
+</html>

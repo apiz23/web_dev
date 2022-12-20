@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+}
+
+.payment_container{
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    width: 50%;
+    padding: 10px;
+    box-shadow: 10px 10px 20px 5px rgba(69, 79, 68, 0.4);
+    height:20em;
+}
+
+p{
+    font-size: 50px;
+}
+
+#payBTN{
+    cursor: pointer;
+    margin-bottom: 10%;
+    font-size: 20px;
+    color: white;
+    background: rgb(42, 70, 131);
+    border: 2px ridge rgb(37, 34, 34);
+    border-radius: 10px;
+    width: 10rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px; 
+}
+
+.pay{
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    
+}
+
+#payment{
+    border:hidden;
+}
+
+.pay_container{
+    margin: 10px;
+}
